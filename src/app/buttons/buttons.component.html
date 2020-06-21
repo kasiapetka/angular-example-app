@@ -1,0 +1,22 @@
+<div class="container">
+  <button
+    class="btn btn-warning"
+    (click)="toggleDetails()">Display Details
+  </button>
+
+  <p [ngStyle]="{
+  marginTop: '20px'
+  }"
+     *ngIf="showDetails">Secret password = tuna</p>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div
+        *ngFor="let i of buttonClicks; let index = index"
+        class="Array"
+        [ngClass]="{ArrayItem : index >= 4}"
+      >{{i}}</div>
+    </div>
+  </div>
+
+</div>

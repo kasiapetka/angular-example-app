@@ -1,0 +1,16 @@
+h3{
+  color: #004ca2;
+}
+
+.Servers{
+  margin: 20px;
+  border: 1px solid #d1d1d1;
+  padding: 30px;
+  text-align: center;
+}
+
+.Create{
+  margin: 20px;
+  padding: 10px;
+  width: 400px;
+}

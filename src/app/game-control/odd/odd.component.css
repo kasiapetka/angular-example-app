@@ -1,0 +1,7 @@
+.ArrayItem{
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(253, 164, 0, 0.33);
+  box-shadow: 0 0 4px 2px rgba(253, 163, 0, 0.6) inset;
+  border: 1px solid #ffc800;
+}

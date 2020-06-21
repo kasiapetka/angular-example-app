@@ -1,0 +1,5 @@
+<h5 [ngStyle]="{
+backgroundColor: getColor()
+}"
+[ngClass]="{Offline: serverStatus==='offline'}">
+  The server with id: {{serverId}} status is: {{getServerStatus()}}</h5>

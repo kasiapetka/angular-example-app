@@ -1,0 +1,17 @@
+<div class="container User">
+  <label>Enter Name</label>
+  <input type="text"
+  class="form-control"
+  [(ngModel)]="name">
+
+  <div class="container Name">
+    <p>Name is: {{name}}</p>
+  </div>
+
+  <button
+    class="btn btn-info"
+    (click)="onClearName()"
+    [disabled]="!name"
+  >Clear name</button>
+
+</div>

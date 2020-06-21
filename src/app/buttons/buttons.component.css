@@ -1,0 +1,11 @@
+.Array{
+  display: inline-block;
+  border: 1px solid #555555;
+  padding: 5px;
+  min-width: 20px;
+  margin: 5px;
+}
+.ArrayItem{
+  background-color: #004ca2;
+  color: white;
+}
