@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="show = !show">Show numbers
+      </button>
+      <br><br>
+      <ul class="list-group"
+          *ngIf="show; else oddInfo">
+        <li *ngFor="let nb of numbers"
+            [ngClass]="{Odd: nb % 2 !== 0}"
+            [ngStyle]="{fontWeight: nb % 2 !== 0 ? 'bold' : ''}"
+            class="list-group-item">
+          {{nb}}
+        </li>
+      </ul>
+      <ng-template #oddInfo>
+        <p>Click the button</p>
+      </ng-template>
+
+      <ul class="list-group"
+          *appUnless="!show">
+        <li *ngFor="let nb of numbers"
+            [ngClass]="{Odd: nb % 2 !== 0}"
+            [ngStyle]="{fontWeight: nb % 2 !== 0 ? 'bold' : ''}"
+            class="list-group-item">
+          {{nb}}
+        </li>
+      </ul>
+
+<!--      <ng-template [ngIf]="show">-->
+<!--        <ul class="list-group">-->
+<!--          <li *ngFor="let nb of numbers"-->
+<!--              [ngClass]="{Odd: nb % 2 !== 0}"-->
+<!--              [ngStyle]="{fontWeight: nb % 2 !== 0 ? 'bold' : ''}"-->
+<!--              class="list-group-item">-->
+<!--            {{nb}}-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </ng-template>-->
+<!--      <ng-template [ngIf]="!show">-->
+<!--        <p>Click the button</p>-->
+<!--      </ng-template>-->
+
+      <p appBasicHighlight>I have been styled</p>
+      <p appHighlight
+         [defaultColor]="'rgba(255,188,0,0.62)'"
+         [highlightColor]="'rgba(255,193,0,0.9)'">I have been styled better</p>
+
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Value is 5</p>
+        <p *ngSwitchCase="10">Value is 10</p>
+        <p *ngSwitchCase="100">Value is 100</p>
+        <p *ngSwitchDefault>Value is Default</p>
+      </div>
+
+    </div>
+  </div>
+</div>
